@@ -1,0 +1,33 @@
+.navbar {
+    position: absolute;
+    top: 3rem;
+    right: 20rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-single-link {
+    display: inline;
+    margin-right: 2rem;
+}
+
+.navbar-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navbar-dropdown:hover {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 3rem;
+        right: 0rem;
+        justify-content: center;
+    }
+}
