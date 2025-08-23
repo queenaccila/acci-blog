@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <img src={acciLogo} className="acci-logo"/>
-      <h1>Welcome to my blog!</h1>
+      <h1 className="title-style">Acci</h1>
     </>
   )
 }

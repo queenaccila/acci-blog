@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: JetBrainsMono, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMono-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMono-Italic.woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMono-Bold.woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("./assets/fonts/JetBrainsMono-Bold-Italic.woff2");
+  font-weight: bold;
+  font-style: italic;
 }
 
 a {
