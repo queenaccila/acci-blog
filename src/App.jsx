@@ -1,13 +1,11 @@
 import acciLogo from './assets/acci-logo.png'
 import './App.css'
-import Navbar from './global-components/Navbar'
+import Home from './pages/Home'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <img src={acciLogo} className="acci-logo"/>
-      <h1 className="title-style">Acci</h1>
+      <Home />
     </>
   )
 }

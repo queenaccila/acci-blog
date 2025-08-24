@@ -1,0 +1,40 @@
+.acci-logo {
+  width: 15rem;
+  justify-content: center;
+}
+
+.title-style {
+  font-weight: bold;
+}
+
+.description {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.description-header {
+  padding-top: 3rem;
+}
+
+.description-text {
+  margin-top: 3rem;
+  text-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .acci-logo {
+    width: 13rem;
+  }
+
+  .title-style {
+    font-size: 3rem;
+  }
+
+  .description {
+    padding: 1rem;
+  }
+
+  .description-header {
+    padding-top: 1rem;
+  }
+}
