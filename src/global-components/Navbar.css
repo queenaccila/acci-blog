@@ -34,11 +34,11 @@
     margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .navbar {
         position: absolute;
-        top: 3rem;
-        right: 0rem;
+        top: 7rem;
+        right: 1rem;
         justify-content: center;
     }
 }

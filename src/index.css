@@ -2,6 +2,7 @@
   font-family: JetBrainsMono, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 2;
   font-weight: 400;
+  text-wrap: wrap;
 
   color-scheme: dark;
   color: #f1ebdd;

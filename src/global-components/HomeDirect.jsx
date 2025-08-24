@@ -2,11 +2,9 @@ import './HomeDirect.css'
 
 function HomeDirect() {
   return (
-    <>
-      <div>
-        
-      </div>
-    </>
+    <div className="header">
+        <h2>Acci's Blog</h2>
+    </div>
   )
 }
 
