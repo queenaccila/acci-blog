@@ -1,13 +1,10 @@
 import acciLogo from '../assets/acci-logo.png'
 import './Home.css'
-import Navbar from '../global-components/Navbar'
 import HomeDirect from '../global-components/HomeDirect'
 
 function Home() {
   return (
     <>
-      <HomeDirect />
-      <Navbar />
       <img src={acciLogo} className="acci-logo"/>
       <h1 className="title-style">Acci's Blog</h1>
       <div className="description">

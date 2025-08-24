@@ -4,6 +4,10 @@
     left: 20rem;
 }
 
+.header-text {
+    color: #f1ebdd;
+}
+
 @media (max-width: 1280px) {
     .header {
         left: 2.5rem;
