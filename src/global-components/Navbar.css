@@ -3,24 +3,35 @@
     top: 3rem;
     right: 20rem;
     list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
 .navbar-single-link {
     display: inline;
+    position: relative;
     margin-right: 2rem;
 }
 
 .navbar-dropdown {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    list-style-type: none;
+    text-align: left;
+    right: 0;
 }
 
 .navbar-dropdown:hover {
     display: block;
+}
+
+.navbar-single-link:hover .navbar-dropdown {
+    display: block;
+}
+
+.navbar-dropdown-link {
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
