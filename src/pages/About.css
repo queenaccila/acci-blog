@@ -1,7 +1,16 @@
 .title-div {
     text-align: left;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 .section {
     margin-top: 3rem;
+}
+
+.header-img {
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    max-width: 100%;
 }
