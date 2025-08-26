@@ -29,6 +29,24 @@ function About() {
             I want this blog to be both a record of growth and an encouragement to continue (and hopefully finish) my projects.
             It's a way for me to take better control of my creative journey, give my ideas a permanent home, and to remind myself that progress is just as valuable as the final product.
           </p>
+
+          <h2>My background and interests</h2>
+          <p>
+            I’ve always loved creating things, even as a kid.
+            For me, creativity was split between two paths: computers and art.
+            For a long time I thought I’d have to choose between the two, but over the years I found my niche in combining them for my own projects.
+          </p>
+          <p>
+            In my early teens, I started learning how to make digital art and slowly developed a style that I’ve grown comfortable with.
+            Art became a way for me to express ideas visually as well as sharing them to others, and it shaped much of my creative identity.
+            Later, during my early adult years, I studied computer science and eventually earned my bachelor’s degree.
+            That gave me the technical foundation to bring my ideas to life through programming and problem-solving.
+          </p>
+          <p>
+            Video game development and digital art are where my interests naturally overlap—I get to use both my technical skills and my artistic side in the same space.
+            More recently, I’ve been diving back into web development, which lets me experiment with projects that are not just functional, but also playful and visually appealing.
+            I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
+          </p>
         </div>
       </div>
     </>
