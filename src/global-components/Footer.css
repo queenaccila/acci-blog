@@ -1,0 +1,33 @@
+.entire-footer {
+    bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright-text {
+    color: #8296b7;
+    left: 15vw;
+}
+
+.social-media {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    right: 15vw;
+}
+
+.social-media-link {
+    margin-right: 2rem;
+}
+
+@media (max-width: 1170px) {
+    .entire-footer {
+        display: block;
+    }
+    
+    .social-media {
+        position: absolute;
+        left: 15vw;
+        margin-top: 5rem;
+    }
+}
