@@ -16,7 +16,7 @@ function Footer() {
             <li className="social-media-link"><a href=""><FaItchIo /></a></li>
             <li className="social-media-link"><a href=""><FaYoutube /></a></li>
             <li className="social-media-link"><a href=""><FaBluesky /></a></li>
-            <li><a href=""><FaLinkedin /></a></li>
+            <li className="social-media-link"><a href=""><FaLinkedin /></a></li>
             </IconContext.Provider>
         </ul>
     </div>

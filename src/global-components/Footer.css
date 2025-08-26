@@ -1,5 +1,6 @@
 .entire-footer {
-    bottom: 10rem;
+    position: absolute;
+    margin-top: 17rem;
     display: flex;
     flex-direction: row;
 }
@@ -11,13 +12,12 @@
 
 .social-media {
     list-style-type: none;
-    justify-content: center;
-    align-items: center;
-    right: 15vw;
+    margin-left: 30vw;
 }
 
 .social-media-link {
     margin-right: 2rem;
+    display: inline-block;
 }
 
 @media (max-width: 1170px) {
