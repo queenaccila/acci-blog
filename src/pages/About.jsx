@@ -51,7 +51,6 @@ function About() {
             More recently, I’ve been diving back into web development, which lets me experiment with projects that are not just functional, but also playful and visually appealing.
             I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
           </p>
-
           <img src={PixelHeader} className="header-img"/>
         </div>
       </div>
