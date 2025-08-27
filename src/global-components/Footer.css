@@ -20,14 +20,19 @@
     display: inline-block;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 871px) {
     .entire-footer {
-        margin-top: 5rem;
+        margin-top: 12rem;
     }
     
     .social-media {
         position: absolute;
-        left: 15vw;
         margin-top: 5rem;
+        margin-left: 0rem;
+        text-wrap-mode: nowrap;
+    }
+
+    .copyright-text {
+        margin-left: 2rem;
     }
 }
