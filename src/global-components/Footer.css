@@ -22,7 +22,7 @@
 
 @media (max-width: 1170px) {
     .entire-footer {
-        display: block;
+        margin-top: 5rem;
     }
     
     .social-media {
