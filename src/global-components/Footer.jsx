@@ -16,7 +16,7 @@ function Footer() {
             <li className="social-media-link"><a href="https://queenaccila.itch.io/"><FaItchIo /></a></li>
             <li className="social-media-link"><a href="https://www.youtube.com/@accila"><FaYoutube /></a></li>
             <li className="social-media-link"><a href="https://bsky.app/profile/queenaccila.bsky.social"><FaBluesky /></a></li>
-            <li className="social-media-link"><a href="https://www.linkedin.com/in/helen-ho-5a496724a/"><FaLinkedin /></a></li>
+            <li style={{ display: "inline-block" }}><a href="https://www.linkedin.com/in/helen-ho-5a496724a/"><FaLinkedin /></a></li>
             </IconContext.Provider>
         </ul>
     </div>
