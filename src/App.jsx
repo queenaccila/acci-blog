@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
+import HeaderImg from './assets/blog-header.png'
+
 import Navbar from './global-components/Navbar'
 import Footer from './global-components/Footer'
 
@@ -9,6 +11,7 @@ import About from './pages/About'
 function App() {
   return (
     <>
+      <img src={HeaderImg} className="blog-header"/>
       <Router>
         <Navbar />
         <Routes>

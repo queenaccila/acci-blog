@@ -10,6 +10,7 @@ function Navbar() {
         <li className="navbar-single-link"><Link to="/about">About</Link></li>
         <li className="navbar-single-link"><a href="">Posts</a></li>
         <li className="navbar-single-link"><a href="">Art</a></li>
+        <li className="navbar-single-link"><a href="">Showcase</a></li>
         <li className="navbar-single-link"><a href="">Videos</a></li>
         <li className="navbar-single-link"><a href="">Inbox</a></li>
       </ul>
