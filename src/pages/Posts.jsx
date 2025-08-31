@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import './Posts.css'
 import { posts, getRecentPosts, paginatePosts } from '../content/PostIndex';
 import { IconContext } from "react-icons";
@@ -31,9 +32,7 @@ function RecentPosts() {
                 day: "numeric"
               })}
             </span>
-            <a href={`/posts/${post.frontmatter.slug}`}>
-              {post.frontmatter.title}
-            </a>
+            <Link to={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</Link>
           </li>
         ))}
       </ul>

@@ -73,6 +73,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #8296b7;
+  color: #112540;
   cursor: pointer;
   transition: background-color 0.25s;
 }
