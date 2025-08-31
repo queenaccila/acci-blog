@@ -10,7 +10,7 @@ export const posts = Object.entries(
 // get recent posts for the page
 export function getRecentPosts(posts, limit = 5) {
   return posts
-    .filter(post => post.frontmatter && post.frontmatter.draft === false) // skip drafts
+    .filter(post => post.frontmatter && post.frontmatter.draft === false)
     .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
     .slice(0, limit);
 }

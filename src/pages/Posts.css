@@ -1,3 +1,20 @@
+.post-div {
+    align-items: start;
+}
+
 .post-list {
+    list-style-type: none;
     text-align: left;
+}
+
+.single-link a {
+    color: #f1ebdd;
+}
+
+.single-link a:hover {
+    color: #f9bec2;
+}
+
+.date-color {
+    color: #8296b7;
 }
