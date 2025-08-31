@@ -41,4 +41,17 @@
 
 .page-button {
     background-color: transparent;
+    color: #f1ebdd;
+}
+
+.page-button:hover {
+    background-color: transparent;
+    color: #f9bec2;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }

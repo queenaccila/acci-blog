@@ -1,6 +1,10 @@
 import { useState } from "react";
 import './Posts.css'
 import { posts, getRecentPosts, paginatePosts } from '../content/PostIndex';
+import { IconContext } from "react-icons";
+
+import { IoMdArrowDropright } from "react-icons/io";
+import { IoMdArrowDropleft } from "react-icons/io";
 
 function RecentPosts() {
   // Local state for the current page
@@ -35,13 +39,15 @@ function RecentPosts() {
 
       {/* Simple pagination navigation */}
       <div className="pagination">
+        <IconContext.Provider value={{ size: "2.5rem", className: "arrow-button" }}>
         {page > 1 && (
-          <button onClick={() => setPage(page - 1)}>Previous</button>
+          <button onClick={() => setPage(page - 1)} className="page-button"><IoMdArrowDropleft /></button>
         )}
         <span> Page {page} of {pages.length} </span>
         {page < pages.length && (
-          <button onClick={() => setPage(page + 1)} className="page-button">Next</button>
+          <button onClick={() => setPage(page + 1)} className="page-button"><IoMdArrowDropright /></button>
         )}
+        </IconContext.Provider>
       </div>
     </div>
   );
