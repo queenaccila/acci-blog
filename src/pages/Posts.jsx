@@ -12,13 +12,14 @@ function RecentPosts() {
 
   // Get posts
   const recentPosts = getRecentPosts(posts);
-  const pages = paginatePosts(recentPosts, 5);
+  const pages = paginatePosts(recentPosts, 15);
 
   const currentPagePosts = pages[page - 1] || [];
 
   return (
     <div className="post-div">
-      <h1>All Posts</h1>
+      <h1>Recent Posts</h1>
+
       <ul className="post-list">
         {currentPagePosts.map(post => (
           <li key={post.frontmatter.slug} className="single-link">
