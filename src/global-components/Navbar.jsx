@@ -24,7 +24,7 @@ function Navbar() {
         <li className="navbar-single-link"><Link to="/about">About</Link></li>
         <li className="navbar-single-link"><Link to="/posts">Posts</Link></li>
         <li className="navbar-single-link"><Link to="/art">Art</Link></li>
-        <li className="navbar-single-link"><a href="">Videos</a></li>
+        <li className="navbar-single-link"><Link to="/videos">Videos</Link></li>
         <li className="navbar-single-link"><a href="">Tags</a></li>
         <li className="navbar-single-link"><a href="">Inbox</a></li>
       </ul>

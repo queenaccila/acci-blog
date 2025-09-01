@@ -1,0 +1,29 @@
+.all-videos {
+    align-content: center;
+    justify-content: center;
+    width: 30vw;
+    margin-top: 10rem;
+}
+
+.video-card {
+    background-color: transparent;
+    padding: 1rem;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.video-card:hover {
+    background-color: #8296b7;
+}
+
+.video-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+  @media (max-width: 768px) {
+    .all-videos {
+        width: 85vw;
+    }
+  }

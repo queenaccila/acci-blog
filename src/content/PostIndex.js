@@ -5,7 +5,8 @@ export const posts = Object.entries(
   component: mod.default,
   frontmatter: mod.frontmatter,
   source: path,
-  mainImage: mod.mainImage || null
+  mainImage: mod.mainImage || null,
+  videoUrl: mod.videoUrl || null
 }));
 
 // get recent posts for the page
