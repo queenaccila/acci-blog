@@ -1,0 +1,12 @@
+.tag-container {
+    left: 10vw;
+    right: 10vw;
+}
+
+.tag-button {
+    margin: 1rem;
+}
+
+.tag-text {
+    color: #f9bec2;
+}

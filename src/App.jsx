@@ -11,6 +11,7 @@ import RecentPosts from './pages/Posts'
 import PostViewer from './pages/PostViewer'
 import ArtGallery from "./pages/ArtGallery"
 import Videos from './pages/Videos'
+import Tags from './pages/Tags'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/posts/:slug" element={<PostViewer />}></Route>
           <Route path="/art" element={<ArtGallery />}></Route>
           <Route path="/videos" element={<Videos />}></Route>
+          <Route path="/tags" element={<Tags />}></Route>
         </Routes>
       </Router>
       <Footer />
