@@ -6,13 +6,12 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1rem;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 1rem;
