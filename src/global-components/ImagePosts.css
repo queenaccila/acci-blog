@@ -1,0 +1,10 @@
+.main-image {
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        width: 100%;
+    }
+}

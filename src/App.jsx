@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import RecentPosts from './pages/Posts'
 import PostViewer from './pages/PostViewer'
+import ArtGallery from "./pages/ArtGallery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/posts" element={<RecentPosts />}></Route>
           <Route path="/posts/:slug" element={<PostViewer />}></Route>
+          <Route path="/art" element={<ArtGallery />}></Route>
         </Routes>
       </Router>
       <Footer />
