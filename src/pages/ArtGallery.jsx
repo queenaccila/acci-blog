@@ -1,6 +1,7 @@
 import './ArtGallery.css';
 import { posts } from '../content/PostIndex';
 import { Link } from 'react-router-dom';
+import * as motion from "motion/react-client"
 
 function ArtGallery() {
     // filter posts based on the art tag
@@ -15,7 +16,14 @@ function ArtGallery() {
         <div className="gallery-grid">
         {artPosts.map(post => (
             <Link key={post.frontmatter.slug} to={`/posts/${post.frontmatter.slug}`} className="gallery-item">
-            <img src={post.mainImage} alt={post.frontmatter.title} loading="lazy" />
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.2 }}
+            >
+                <img src={post.mainImage} alt={post.frontmatter.title} loading="lazy" />
+            </motion.div>
             </Link>
         ))}
         </div>
