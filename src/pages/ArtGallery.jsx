@@ -15,7 +15,7 @@ function ArtGallery() {
         <div className="gallery-grid">
         {artPosts.map(post => (
             <Link key={post.frontmatter.slug} to={`/posts/${post.frontmatter.slug}`} className="gallery-item">
-            <img src={post.mainImage} alt={post.frontmatter.title} />
+            <img src={post.mainImage} alt={post.frontmatter.title} loading="lazy" />
             </Link>
         ))}
         </div>

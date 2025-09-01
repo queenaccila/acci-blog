@@ -8,7 +8,7 @@ function About() {
       <div className="title-div">
         <h1>About My Blog</h1>
         <div className="section">
-          <img src={PixelHeader} className="header-img"/>
+          <img src={PixelHeader} className="header-img" loading="lazy"/>
           <h2>Making this website</h2>
           <p>
             Growing up with the internet, social media became my main outlet for sharing my work.
@@ -31,7 +31,7 @@ function About() {
             It's a way for me to take better control of my creative journey, give my ideas a permanent home, and to remind myself that progress is just as valuable as the final product.
           </p>
 
-          <img src={PixelHeader} className="header-img"/>
+          <img src={PixelHeader} className="header-img" loading="lazy"/>
 
           <h2>My background and interests</h2>
           <p>
@@ -50,7 +50,7 @@ function About() {
             More recently, I’ve been diving back into web development, which lets me experiment with projects that are not just functional, but also playful and visually appealing.
             I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
           </p>
-          <img src={PixelHeader} className="header-img"/>
+          <img src={PixelHeader} className="header-img" loading="lazy"/>
         </div>
       </div>
     </>

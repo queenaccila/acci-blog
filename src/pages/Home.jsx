@@ -4,7 +4,7 @@ import './Home.css'
 function Home() {
   return (
     <>
-      <img src={acciLogo} className="acci-logo"/>
+      <img src={acciLogo} className="acci-logo" loading="lazy"/>
       <h1 className="title-style">Acci's Blog</h1>
       <div className="description">
         <h3 className="description-header">She/Her ✦ 23 ✦ Sep 29th ✦ PST</h3>
