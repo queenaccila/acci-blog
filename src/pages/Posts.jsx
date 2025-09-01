@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import './Posts.css'
 import { posts, getRecentPosts, paginatePosts } from '../content/PostIndex';
-import { IconContext } from "react-icons";
+import { motion } from "framer-motion";
 
+import { IconContext } from "react-icons";
 import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
 
@@ -21,21 +22,27 @@ function RecentPosts() {
     <div className="post-div">
       <h1>Recent Posts</h1>
 
-      <ul className="post-list">
-        {currentPagePosts.map(post => (
-          <li key={post.frontmatter.slug} className="single-link">
-            <span className="date-color">
-              {new Date(post.frontmatter.date).toLocaleDateString("en-US", {
-                timeZone: "America/Los_Angeles",
-                year: "numeric",
-                month: "short",
-                day: "numeric"
-              })}
-            </span>
-            <Link to={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <motion.div
+        initial = {{ opacity: 0, y: 20 }}
+        animate = {{ opacity: 1, y: 0 }}
+        transition= {{ transition: 0.5 }}
+      >
+        <ul className="post-list">
+          {currentPagePosts.map(post => (
+            <li key={post.frontmatter.slug} className="single-link">
+              <span className="date-color">
+                {new Date(post.frontmatter.date).toLocaleDateString("en-US", {
+                  timeZone: "America/Los_Angeles",
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric"
+                })}
+              </span>
+              <Link to={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
 
       {/* Simple pagination navigation */}
       <div className="pagination">
