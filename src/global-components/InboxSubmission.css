@@ -23,7 +23,6 @@
 .bubble-username {
     margin-top: 0.25rem;
     font-size: 0.85rem;
-    color: #555;
     text-align: center;
 }
 
@@ -38,7 +37,7 @@
 .bubble::before {
     content: "";
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     left: -1rem;
     width: 0;
     height: 0;
