@@ -12,6 +12,7 @@ import PostViewer from './pages/PostViewer'
 import ArtGallery from "./pages/ArtGallery"
 import Videos from './pages/Videos'
 import Tags from './pages/Tags'
+import Inbox from './pages/Inbox'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/art" element={<ArtGallery />}></Route>
           <Route path="/videos" element={<Videos />}></Route>
           <Route path="/tags" element={<Tags />}></Route>
+          <Route path="/inbox" element={<Inbox />}></Route>
         </Routes>
       </Router>
       <Footer />
