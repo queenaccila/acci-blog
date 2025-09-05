@@ -1,8 +1,13 @@
-import Navbar from "../global-components/Navbar"
 import PixelHeader from "../assets/pixel-heart-header.gif"
+import Dropdown from "../global-components/DropdownText"
 import './About.css'
 
 function About() {
+  const DropdownText = [
+    { question: "What if I want to ask you something?", answer: <>Anything! Use this link to <a href="/inbox">my inbox</a> to ask me anything!</> },
+    { question: "What did you use to make this blog?", answer: "I used React as my main framework. To deploy the website I use Cloudflare. In terms of posting videos on here (since I don't post on YouTube), I use Bunny Stream to store and show my videos." }
+  ];
+
   return (
     <>
       <div className="title-div">
@@ -51,6 +56,9 @@ function About() {
             I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
           </p>
           <img src={PixelHeader} className="header-img" loading="lazy"/>
+
+          <h2>FAQs About This Website</h2>
+          <Dropdown faqs={DropdownText}/>
         </div>
       </div>
     </>
