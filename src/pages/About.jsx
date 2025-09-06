@@ -14,6 +14,18 @@ function About() {
         <h1>About My Blog</h1>
         <div className="section">
           <img src={PixelHeader} className="header-img" loading="lazy"/>
+
+          <h2>About Me</h2>
+          <p>
+            Acci is my online name!
+            I use it instead of my real name for the sake of avoiding using any personal info when it's not needed.
+            My formal background is in computer science, as I've always had an interest in coding when I was a kid.
+            My exposure to the internet and video games made me have an interest in creating things, and I wanted to learn some of the skills to do them!
+            I started drawing when I was in high school, and slowly started to learn 3D modeling later during my time at university.
+          </p>
+
+          <img src={PixelHeader} className="header-img" loading="lazy"/>
+
           <h2>Making this website</h2>
           <p>
             Growing up with the internet, social media became my main outlet for sharing my work.
@@ -23,13 +35,15 @@ function About() {
           </p>
           <p>
             As much as I loved those spaces, I felt I was experiencing the limits of them.
-            I used to get so caught up in social media algorithms and engagement metrics when I post that it gets overshadowed by the creative side of my work.
+            I used to get so caught up in social media algorithms and engagement when I post that it overshadowed the creative side of my work.
             It started to feel that I had more pressure to do well on the platform rather than create for myself.
+            Not only this, but I feel that I had no finer control over what I can post. 
           </p>
           <p>
             This is how I got the idea of making my own blog.
             This website is meant to be a personal place I can document progress on my projects, reflect on my ideas, and share them without the chaotic noise from social media spaces.
             Something I've learned is when I share my project progress rather than only just the finished product, I'm more likely to finish them rather than having the idea get stuck in the void.
+            I always like the journey of making something, which makes the final product much more meaningful to me.
           </p>
           <p>
             I want this blog to be both a record of growth and an encouragement to continue (and hopefully finish) my projects.
