@@ -4,8 +4,9 @@ import './About.css'
 
 function About() {
   const DropdownText = [
+    { question: "What did you use to make this blog?", answer: "I used React as my main framework. To deploy the website I use Cloudflare. In terms of posting videos on here (since I don't post on YouTube), I use Bunny Stream to store and show my videos." },
     { question: "What if I want to ask you something?", answer: <>Anything! Use this link to <a href="/inbox">my inbox</a> to ask me anything!</> },
-    { question: "What did you use to make this blog?", answer: "I used React as my main framework. To deploy the website I use Cloudflare. In terms of posting videos on here (since I don't post on YouTube), I use Bunny Stream to store and show my videos." }
+    { question: "I want to comment on your post, but I don't have GitHub. Are there other ways to make a comment?", answer: "Right now I am using Giscus, which is built with GitHub's discussion system. I'm working on another solution so it's more accessible for people to comment, but feel free to still send something to my inbox!" }
   ];
 
   return (
