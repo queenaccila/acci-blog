@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGoogle, FaDiscord, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import AnonFile from "../../assets/tumblr-icon.png";
 import './CommentInput.css';
 
-function CommentInput({ user, handleSignIn, handleSignOut, handleSubmitExternal }) {
+import { signInWithProvider, signOut, getUser }  from "./SignInFunctions";
+
+function CommentInput({ user }) {
     const [comment, setComment] = useState("");
     const [showSignInPopup, setShowSignInPopup] = useState(false);
     const [signIn, setSignIn] = useState(true);
+
+    useEffect(() => {
+        const fetchUser = async () => {
+        const currentUser = await getUser();
+        setUser(currentUser);
+        };
+        fetchUser();
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +28,13 @@ function CommentInput({ user, handleSignIn, handleSignOut, handleSubmitExternal 
         if (!comment.trim()) return; // Prevent empty comment
         handleSubmitExternal(comment);
         setComment("");
+    };
+
+    const handleSignIn = async (provider) => {
+        const { data, error } = await signInWithProvider(provider);
+        if (!error) {
+            console.log("Redirecting to provider for authentication...");
+        }
     };
 
     return (
@@ -55,7 +72,7 @@ function CommentInput({ user, handleSignIn, handleSignOut, handleSubmitExternal 
                             This is my username
                         </p>
                     </div>
-                    <button className="logout-btn" onClick={handleSignOut}>
+                    <button className="logout-btn" onClick={() => setSignIn(false)}>
                         Logout
                     </button>
                 </div>
