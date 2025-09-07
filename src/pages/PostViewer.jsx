@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { posts } from "../content/PostIndex";
 import { useNavigate } from 'react-router-dom';
+import CommentSystem from '../global-components/comment-system/CommentSystem'
 import './PostViewer.css'
 
 import { TbArrowBackUp } from "react-icons/tb";
@@ -42,6 +43,9 @@ function PostViewer() {
 
             {/* Render the actual MDX content */}
             <PostComponent className="post-content"/>
+
+            {/* Comment system below */}
+            <CommentSystem />
         </div>
   );
 }
