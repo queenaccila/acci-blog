@@ -37,6 +37,13 @@ function CommentInput({ user }) {
         }
     };
 
+    const handleSignOut = async () => {
+        const { error } = await signOut();
+        if (!error) {
+            console.log("User signed out");
+        }
+    }
+
     return (
         <div className="comment-input-container">
             <h2>Comments</h2>
@@ -72,7 +79,7 @@ function CommentInput({ user }) {
                             This is my username
                         </p>
                     </div>
-                    <button className="logout-btn" onClick={() => setSignIn(false)}>
+                    <button className="logout-btn" onClick={() => {handleSignOut(); setSignIn(false);}}>
                         Logout
                     </button>
                 </div>
