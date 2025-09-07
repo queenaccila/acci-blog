@@ -60,6 +60,15 @@
     margin-bottom: 1rem;
 }
 
+.user-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.logout-btn {
+    margin: 2rem;
+}
+
 @media (max-width: 768px) {
     .submit-btn {
         width: 100%;
