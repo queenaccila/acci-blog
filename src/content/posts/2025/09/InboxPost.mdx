@@ -9,6 +9,7 @@ slug: "inbox-post"
 import InboxSubmission from '../../../../global-components/InboxSubmission'
 import SubmissionImg from '../../../art/MinaChibis.png'
 import IconImg from '../../../art/EngineerIcon.png'
+import CommentSystem from '../../../../global-components/comment-system/CommentSystem'
 
 <InboxSubmission
     text=
@@ -24,3 +25,5 @@ import IconImg from '../../../art/EngineerIcon.png'
 />
 
 Man, I don't know I just work here...
+
+<CommentSystem postSlug={frontmatter.slug}/>

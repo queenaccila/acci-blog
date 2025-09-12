@@ -1,5 +1,5 @@
 :root {
-  font-family: JetBrainsMono, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: JetBrainsMono, system-ui, Newgrounds, Avenir, Helvetica, Arial, sans-serif;
   line-height: 2;
   font-weight: 400;
   text-wrap: wrap;
@@ -40,6 +40,11 @@
   src: url("./assets/fonts/JetBrainsMono-Bold-Italic.woff2");
   font-weight: bold;
   font-style: italic;
+}
+
+@font-face {
+  font-family: Newgrounds;
+  src: url("./assets/fonts/NewgroundsFont-Regular.otf");
 }
 
 a {

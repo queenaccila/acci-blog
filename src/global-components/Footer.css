@@ -16,14 +16,28 @@
 .social-media {
     list-style-type: none;
     margin-left: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .social-media-link {
-    margin-right: 2rem;
     display: inline-block;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 871px) {
+.newgrounds-logo {
+    font-family: Newgrounds;
+    font-size: 1.6rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.1rem;
+}
+
+@media (max-width: 975px) {
     .entire-footer {
         margin-top: 12rem;
     }

@@ -1,8 +1,8 @@
 import CommentInput from './CommentInput'
 
-function CommentSystem() {
+function CommentSystem( postSlug ) {
     return(
-        <CommentInput />
+        <CommentInput currentPostSlug={postSlug}/>
     );
 }
 
