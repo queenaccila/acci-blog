@@ -6,7 +6,7 @@ import "./CommentInput.css";
 
 import { supabase, signInWithProvider, signOut, getUser } from "./SignInFunctions";
 
-function CommentInput({ currentPostSlug }) {
+function CommentInput({ currentPostSlug, onNewComment }) {
     const [comment, setComment] = useState("");
     const [showSignInPopup, setShowSignInPopup] = useState(false);
     const [user, setUser] = useState(null);
@@ -24,32 +24,33 @@ function CommentInput({ currentPostSlug }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         if (!user) {
             setShowSignInPopup(true);
             return;
         }
 
-        if (!comment.trim()) return;
+        const trimmedComment = comment.trim();
+        if (!trimmedComment) return;
 
-        // insert comment into the table
-        const { error } = await supabase.from("comment").insert([
+        const { data, error } = await supabase
+        .from("comment")
+        .insert([
             {
-                post_id: currentPostSlug,
-                user_id: user.id,
-                username: user.user_metadata?.full_name || user.email,
-                profile_pic: user.user_metadata?.avatar_url || null,
-                content: comment,
-                is_parent: true,
-                is_deleted: false,
+            post_id: currentPostSlug,
+            user_id: user.id,
+            username: user.user_metadata?.full_name || user.email,
+            profile_pic: user.user_metadata?.avatar_url || null,
+            content: trimmedComment,
+            is_parent: true,
+            is_deleted: false,
             },
-        ]);
+        ])
+        .select(); // returns inserted rows
 
-        if (error) {
-            console.error("Error inserting comment:", error.message);
-        } else {
-            console.log("Comment posted successfully!");
-            setComment(""); // clear text area
+        if (error) console.error(error);
+        else {
+        setComment(""); // clear textarea
+        if (onNewComment) onNewComment(data[0]); // update parent state
         }
     };
 

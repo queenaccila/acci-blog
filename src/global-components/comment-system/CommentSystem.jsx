@@ -1,48 +1,50 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { supabase } from "./SignInFunctions";
 import CommentInput from "./CommentInput";
 import SingleComment from "./SingleComment";
-import { supabase } from "./SignInFunctions";
 
 function CommentSystem({ postSlug }) {
   const [comments, setComments] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   // Fetch comments from Supabase
   const fetchComments = async () => {
-    setLoading(true);
-
     const { data, error } = await supabase
-      .from("comment") // ✅ Make sure table name is correct
+      .from("comment")
       .select("*")
-      .eq("post_id", postSlug) // current post
-      .order("created_at", { ascending: true }); // Oldest first
+      .eq("post_id", postSlug)
+      .order("created_at", { ascending: true });
 
-    if (error) {
-      console.error("Error fetching comments:", error.message);
-    } else {
-      setComments(data);
-    }
-
-    setLoading(false);
+    if (error) console.error(error);
+    else setComments(data);
   };
 
-  // Fetch when component mounts OR postSlug changes
   useEffect(() => {
     fetchComments();
+
+    // Optional: subscribe to real-time updates
+    const subscription = supabase
+      .channel(`comments:${postSlug}`)
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "comment", filter: `post_id=eq.${postSlug}` },
+        (payload) => {
+          setComments((prev) => [...prev, payload.new]);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(subscription);
+    };
   }, [postSlug]);
 
   return (
-    <div className="comment-system">
-      <CommentInput currentPostSlug={postSlug} />
+    <div>
+      <CommentInput
+        currentPostSlug={postSlug}
+        onNewComment={(comment) => setComments((prev) => [...prev, comment])}
+      />
 
-
-      {/* Show loading state */}
-      {loading && <p>Loading comments...</p>}
-
-      {/* No comments yet */}
-      {!loading && comments.length === 0 && <p>No comments yet. Be the first!</p>}
-
-      {/* List of Comments */}
       <div className="comments-list">
         {comments.map((comment) => (
           <SingleComment
