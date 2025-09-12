@@ -1,0 +1,52 @@
+/* Container for the gallery and padding */
+.gallery-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tab buttons */
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+/* Grid for images */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+/* Individual gallery item / card */
+.gallery-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 1/1; /* keeps square shape */
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Optional: title below each image */
+.gallery-card h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}

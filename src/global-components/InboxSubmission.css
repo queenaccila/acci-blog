@@ -1,0 +1,90 @@
+.bubble-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.bubble-user {
+    display: flex;
+    flex-direction: column; /* stack icon and username */
+    align-items: center; /* center username below icon */
+    margin-right: 0.5rem;
+    padding: 2rem;
+}
+
+.bubble-user-icon {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.bubble-username {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.bubble {
+    background: #f1ebdd;
+    border-radius: 16px;
+    padding: 1rem 2rem;
+    position: relative;
+    max-width: 70%;
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid #f1ebdd;
+}
+
+.bubble-text p {
+    margin: 0;
+    color: #112540;
+}
+
+.bubble-image {
+    margin-top: 0.5rem;
+    max-width: 50%;
+    border-radius: 12px;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.space-divider {
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .bubble-user-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .bubble-user {
+        padding: 0.5rem;
+    }
+
+    .user-name {
+        font-size: 1rem;
+        text-wrap: wrap;
+    }
+
+    .bubble-image {
+        max-width: 100%;
+    }
+}

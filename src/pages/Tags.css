@@ -1,0 +1,25 @@
+.tag-container {
+    left: 10vw;
+    right: 10vw;
+}
+
+.tag-list {
+    list-style: none;
+    align-items: start;
+    padding: 0;
+    margin-left: 3rem;
+}
+
+.tag-list li {
+    display: flex;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.tag-button {
+    margin: 1rem;
+}
+
+.tag-text {
+    color: #f9bec2;
+}

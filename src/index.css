@@ -1,5 +1,5 @@
 :root {
-  font-family: JetBrainsMono, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: JetBrainsMono, system-ui, Newgrounds, Avenir, Helvetica, Arial, sans-serif;
   line-height: 2;
   font-weight: 400;
   text-wrap: wrap;
@@ -42,6 +42,11 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: Newgrounds;
+  src: url("./assets/fonts/NewgroundsFont-Regular.otf");
+}
+
 a {
   font-weight: 500;
   color: #8296b7;
@@ -73,6 +78,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #8296b7;
+  color: #112540;
   cursor: pointer;
   transition: background-color 0.25s;
 }
@@ -82,4 +88,8 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+img {
+  pointer-events: none;
 }

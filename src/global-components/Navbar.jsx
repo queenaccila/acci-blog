@@ -23,10 +23,10 @@ function Navbar() {
       <ul className={`navbar ${isOpen ? "open" : ""}`}>
         <li className="navbar-single-link"><Link to="/about">About</Link></li>
         <li className="navbar-single-link"><Link to="/posts">Posts</Link></li>
-        <li className="navbar-single-link"><a href="">Art</a></li>
-        <li className="navbar-single-link"><a href="">Showcase</a></li>
-        <li className="navbar-single-link"><a href="">Videos</a></li>
-        <li className="navbar-single-link"><a href="">Inbox</a></li>
+        <li className="navbar-single-link"><Link to="/art">Art</Link></li>
+        <li className="navbar-single-link"><Link to="/videos">Videos</Link></li>
+        <li className="navbar-single-link"><Link to="/tags">Tags</Link></li>
+        <li className="navbar-single-link"><Link to="/inbox">Inbox</Link></li>
       </ul>
     </>
   )

@@ -1,0 +1,10 @@
+.post-page {
+    text-align: left !important;
+    padding-top: 10rem;
+}
+
+@media (max-width: 768px) {
+    .post-page {
+        padding-top: 5rem;
+    }
+}
