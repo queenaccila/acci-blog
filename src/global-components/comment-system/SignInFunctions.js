@@ -5,7 +5,7 @@ export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY,
   {
     auth: {
-      persistSession: true, // 🔹 ensures session stays across refresh/navigation
+      persistSession: true, // session stays true across pages
       autoRefreshToken: true,
       detectSessionInUrl: true,
     },

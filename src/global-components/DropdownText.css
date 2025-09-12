@@ -23,6 +23,7 @@
   align-items: center;
   border: none;
   color: #f1ebdd;
+  line-height: 2rem;
 }
 
 .faq-question:hover {
@@ -36,7 +37,7 @@
 
 .faq-toggle {
   font-weight: bold;
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 @media (max-width: 768px) {
