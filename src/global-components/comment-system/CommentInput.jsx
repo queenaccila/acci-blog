@@ -36,13 +36,12 @@ function CommentInput({ currentPostSlug, onNewComment }) {
         .from("comment")
         .insert([
             {
-            post_id: currentPostSlug,
-            user_id: user.id,
-            username: user.user_metadata?.full_name || user.email,
-            profile_pic: user.user_metadata?.avatar_url || null,
-            content: trimmedComment,
-            is_parent: true,
-            is_deleted: false,
+                post_id: currentPostSlug,
+                user_id: user.id,
+                username: user.user_metadata?.full_name || user.email,
+                profile_pic: user.user_metadata?.avatar_url || null,
+                content: trimmedComment,
+                is_deleted: false,
             },
         ])
         .select(); // returns inserted rows

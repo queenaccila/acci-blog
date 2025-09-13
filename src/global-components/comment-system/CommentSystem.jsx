@@ -12,8 +12,8 @@ function CommentSystem({ postSlug }) {
       .from("comment")
       .select("*")
       .eq("post_id", postSlug)
+      .eq("is_deleted", false)
       .order("created_at", { ascending: true });
-
     if (error) console.error(error);
     else setComments(data);
   };
@@ -49,10 +49,13 @@ function CommentSystem({ postSlug }) {
         {comments.map((comment) => (
           <SingleComment
             key={comment.comment_id}
+            commentId={comment.comment_id}
+            userId={comment.user_id}
             username={comment.username}
             profilePic={comment.profile_pic}
             content={comment.content}
             createdAt={comment.created_at}
+            refreshComments={fetchComments}
           />
         ))}
       </div>

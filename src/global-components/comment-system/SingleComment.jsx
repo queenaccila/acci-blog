@@ -1,8 +1,44 @@
 import './SingleComment.css';
-import AnonPic from '../../assets/tumblr-icon.png'
+import { supabase } from './SignInFunctions';
+import AnonPic from '../../assets/tumblr-icon.png';
+import { useState, useEffect } from "react";
 
-function SingleComment({ username, profilePic, content, createdAt }) {
+function SingleComment({ commentId, userId, username, profilePic, content, createdAt, refreshComments }) {
+    const [currentUser, setCurrentUser] = useState(null);
     const avatarSrc = profilePic && profilePic.trim() !== '' ? profilePic : AnonPic;
+
+    // Fetch the currently signed-in user
+    useEffect(() => {
+        const fetchUser = async () => {
+            const { data, error } = await supabase.auth.getSession();
+            if (error) {
+                console.error("Error fetching session:", error.message);
+            } else {
+                setCurrentUser(data?.session?.user || null);
+            }
+        };
+        fetchUser();
+    }, []);
+
+    // Delete comment handler
+    const handleDelete = async () => {
+        if (!currentUser || currentUser.id !== userId) {
+            alert("You can only delete your own comments!");
+            return;
+        }
+
+        const { error } = await supabase
+            .from("comment")
+            .update({ is_deleted: true })
+            .eq("comment_id", commentId);
+
+        if (error) {
+            console.error("Error deleting comment:", error.message);
+        } else {
+            console.log("Comment marked as deleted!");
+            refreshComments();
+        }
+    };
 
     return (
         <div className="single-comment">
@@ -30,19 +66,17 @@ function SingleComment({ username, profilePic, content, createdAt }) {
                                 const diffInHours = diffInMs / (1000 * 60 * 60);
 
                                 if (diffInHours < 24) {
-                                // Show "time ago" style
-                                const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
-                                if (diffInMinutes < 1) return "Just now";
-                                if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
-                                const hours = Math.floor(diffInMinutes / 60);
-                                return `${hours}h ago`;
+                                    const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+                                    if (diffInMinutes < 1) return "Just now";
+                                    if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+                                    const hours = Math.floor(diffInMinutes / 60);
+                                    return `${hours}h ago`;
                                 } else {
-                                // Show full date
-                                return commentTime.toLocaleDateString(undefined, {
-                                    year: "numeric",
-                                    month: "short",
-                                    day: "numeric",
-                                });
+                                    return commentTime.toLocaleDateString(undefined, {
+                                        year: "numeric",
+                                        month: "short",
+                                        day: "numeric",
+                                    });
                                 }
                             })()}
                         </span>
@@ -50,6 +84,13 @@ function SingleComment({ username, profilePic, content, createdAt }) {
                 </div>
                 <p className="comment-text">{content}</p>
             </div>
+
+            {/* Show delete button only for comment owner */}
+            {currentUser && currentUser.id === userId && (
+                <button className="delete-btn" onClick={handleDelete}>
+                    Delete
+                </button>
+            )}
         </div>
     );
 }
