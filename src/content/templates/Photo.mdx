@@ -5,9 +5,12 @@ tags: ["photo"]
 draft: true
 slug: "{{SLUG}}"
 ---
+import PixelDivider from '../../../../assets/pixel-heart-header.gif'
 import '../../../../global-components/ImagePosts.css'
 import Kashiwagi from '../../../content/art/'
 
 export const mainImage = Kashiwagi;
 
 <img src={mainImage} className="main-image" loading="lazy"/>
+
+<img src={PixelDivider} className="header-img" loading="lazy"/>

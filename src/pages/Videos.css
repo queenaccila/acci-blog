@@ -22,8 +22,24 @@
     aspect-ratio: 16/9;
 }
 
+.video-iframe-vertical {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 9/16;
+}
+
+.video-iframe-square {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
   @media (max-width: 768px) {
     .all-videos {
         width: 85vw;
+    }
+
+    .video-iframe-vertical {
+        width: 100%;
     }
   }

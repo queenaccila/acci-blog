@@ -93,3 +93,10 @@ button:focus-visible {
 img {
   pointer-events: none;
 }
+
+.header-img {
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    max-width: 100%;
+}
