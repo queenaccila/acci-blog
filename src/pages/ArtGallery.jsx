@@ -70,7 +70,7 @@ function ArtGallery() {
                         >
                         <div className="gallery-card">
                             <img
-                                src={post.mainImage} // assumes you have `export const imageUrl` in your MDX like before
+                                src={post.mainImage}
                                 alt={post.frontmatter.title}
                                 className="gallery-img"
                             />

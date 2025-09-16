@@ -33,7 +33,6 @@
 .gallery-card {
   overflow: hidden;
   border-radius: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .gallery-card img {

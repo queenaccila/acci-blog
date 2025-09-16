@@ -9,6 +9,7 @@ import slugify from "slugify";
 const TEMPLATES = {
     general: "./src/content/templates/General.mdx",
     art: "./src/content/templates/Art.mdx",
+    photo: "./src/content/templates/Photo.mdx",
     video: "./src/content/templates/Video.mdx",
     inboxAnon: "./src/content/templates/Inbox-Anon.mdx",
     inboxUser: "./src/content/templates/Inbox-User.mdx",

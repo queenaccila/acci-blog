@@ -24,3 +24,12 @@ export function paginatePosts(posts, perPage = 20) {
   }
   return pages;
 }
+
+// Get __ most recent posts
+export function getTopRecentPosts(posts, limit = 5) {
+  return posts
+    .filter(post => post.frontmatter && post.frontmatter.draft === false) // exclude drafts
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)) // sort by date
+    .slice(0, limit); // take only the top posts
+}
+
