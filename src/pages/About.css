@@ -4,6 +4,10 @@
     margin-bottom: 10rem;
 }
 
+.title-div h3 {
+    text-align: left;
+}
+
 .section {
     margin-top: 3rem;
 }
@@ -13,4 +17,13 @@
     margin: 1rem auto;
     height: auto;
     max-width: 100%;
+}
+
+.icon-list {
+    list-style: none;
+}
+
+.icon-list li {
+    display: inline-block;
+    margin-right: 1rem;
 }

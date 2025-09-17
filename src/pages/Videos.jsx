@@ -27,8 +27,7 @@ function Videos() {
                         <iframe
                             src={post.videoUrl}
                             title={post.frontmatter.title}
-                            frameBorder="0"
-                            className="video-iframe"
+                            className={`video-iframe-${post.frontmatter.videoType}`}
                         />
                     </Link>
                 </div>

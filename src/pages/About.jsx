@@ -2,6 +2,10 @@ import PixelHeader from "../assets/pixel-heart-header.gif"
 import Dropdown from "../global-components/DropdownText"
 import './About.css'
 
+import { IconContext } from "react-icons";
+import { FaReact } from "react-icons/fa";
+import { SiHugo } from "react-icons/si";
+
 function About() {
   const DropdownText = [
     { question: "What did you use to make this blog?", answer: "I used React as my main web framework (same framework the Facebook devs use), and use Vite as my main tool to build and run React. To deploy the website I use Cloudflare's services, and I've bought the domain from Cloudflare as well. In terms of posting videos on here, I use Bunny Stream to store and show my videos to avoid ads and have more control over them. I might also embed videos from my Newgrounds account." },
@@ -70,6 +74,18 @@ function About() {
             More recently, I’ve been diving back into web development, which lets me experiment with projects that are not just functional, but also playful and visually appealing.
             I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
           </p>
+          <img src={PixelHeader} className="header-img" loading="lazy"/>
+
+          <h2>Tools I use</h2>
+
+          <IconContext.Provider value={{ size: "3rem" }}>
+          <h3>Web Development</h3>
+            <ul className="icon-list">
+              <li><FaReact /></li>
+              <li><SiHugo /></li>
+            </ul>
+          </IconContext.Provider>
+
           <img src={PixelHeader} className="header-img" loading="lazy"/>
 
           <h2>FAQs About This Website</h2>
