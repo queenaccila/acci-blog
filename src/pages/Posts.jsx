@@ -38,7 +38,7 @@ function RecentPosts() {
                   day: "numeric"
                 })}
               </span>
-              <Link to={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</Link>
+              <Link to={`/posts/${post.frontmatter.slug}`} className="link-text">{post.frontmatter.title}</Link>
             </li>
           ))}
         </ul>

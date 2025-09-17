@@ -22,6 +22,12 @@
     aspect-ratio: 16/9;
 }
 
+.video-iframe-horizontal {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
 .video-iframe-vertical {
     width: 50%;
     height: auto;

@@ -39,6 +39,10 @@
     text-align: left;
 }
 
+.link-text {
+    margin-bottom: 1rem;
+}
+
 .page-button {
     background-color: transparent;
     color: #f1ebdd;

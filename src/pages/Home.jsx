@@ -4,17 +4,24 @@ import { motion } from "framer-motion";
 import { posts, getTopRecentPosts } from '../content/PostIndex';
 import PixelDivider from '../assets/pixel-heart-header.gif'
 import './Home.css'
-import './Posts.css'
 
 function Home() {
   // Get the top 5 most recent posts
   const topRecentPosts = getTopRecentPosts(posts, 5);
 
   // Filter posts based on the art or photo tag
-  const displayedPosts = posts.filter(
-    post =>
-      (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
-      post.mainImage
+  const displayedPosts = posts
+    .filter(
+      post =>
+        (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
+        post.mainImage
+    .slice(0, 3)
+  );
+
+  const videoPosts = posts
+    .filter(
+      post => post.frontmatter?.tags?.includes('video') && post.videoUrl
+    .slice(0, 2)
   );
 
   return (
@@ -44,7 +51,7 @@ function Home() {
                   day: "numeric",
                 })}
               </span>
-              <Link to={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</Link>
+              <Link to={`/posts/${post.frontmatter.slug}`} className='link-space'>{post.frontmatter.title}</Link>
             </li>
           ))}
         </ul>
@@ -54,8 +61,8 @@ function Home() {
       <img src={PixelDivider} className='header-img' />
 
       {/* Recent Art & Photos Section */}
-      <div className='recent-posts'>
-        <h2 className='recent-posts-link'>Recent Art & Photos</h2>
+      <div className='recent-images'>
+        <h2>Recent Art & Photos</h2>
         <div className="gallery-grid">
           {displayedPosts.map(post => (
             <Link key={post.frontmatter.slug} to={`/posts/${post.frontmatter.slug}`}>
@@ -71,6 +78,31 @@ function Home() {
           ))}
         </div>
         <h3><Link to="/art" className='recent-posts-link'>All art + photos</Link></h3>
+      </div>
+
+      <img src={PixelDivider} className='header-img' />
+
+      {/* Recent Videos */}
+      <div className='recent-videos'>
+        <h2>Recent Videos</h2>
+        <div>
+          {videoPosts.map(post => (
+                <div key={post.frontmatter.slug} className='video-card'>
+                    <Link to={`/posts/${post.frontmatter.slug}`}>
+                        <h3>{post.frontmatter.title}</h3>
+                        <div className="video-post">
+                            <iframe
+                                src={post.videoUrl}
+                                title={post.frontmatter.title}
+                                allowFullScreen="true"
+                                className={`video-iframe-${post.frontmatter.videoType}`}
+                            />
+                        </div>
+                    </Link>
+                </div>
+            ))}
+        </div>
+        <h3><Link to="/videos">All videos</Link></h3>
       </div>
     </div>
   );
