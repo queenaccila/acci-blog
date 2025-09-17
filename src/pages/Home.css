@@ -106,11 +106,26 @@
   display: block;
 }
 
+.video-list {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .video-card {
   background-color: transparent;
   padding: 1rem;
   transition: 0.3s;
   border-radius: 15px;
+
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  text-align: center;
+}
+
+.video-card iframe {
+  width: 30rem;
 }
 
 .video-post {
@@ -126,18 +141,21 @@
 .video-iframe-horizontal {
     width: 100%;
     height: auto;
+    max-width: 100%;
     aspect-ratio: 16/9;
 }
 
 .video-iframe-vertical {
     width: 50%;
     height: auto;
+    max-width: 100%;
     aspect-ratio: 9/16;
 }
 
 .video-iframe-square {
     width: 100%;
     height: auto;
+    max-width: 100%;
     aspect-ratio: 1/1;
 }
 
@@ -189,6 +207,10 @@
 
   .post-link {
     text-align: center;
+  }
+
+  .video-card iframe {
+    width: 50rem;
   }
 
   .video-iframe-vertical {

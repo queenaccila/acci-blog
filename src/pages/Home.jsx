@@ -85,7 +85,7 @@ function Home() {
       {/* Recent Videos */}
       <div className='recent-videos'>
         <h2>Recent Videos</h2>
-        <div>
+        <div className='video-list'>
           {videoPosts.map(post => (
                 <div key={post.frontmatter.slug} className='video-card'>
                     <Link to={`/posts/${post.frontmatter.slug}`}>
