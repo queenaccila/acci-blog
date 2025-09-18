@@ -4,13 +4,11 @@ date: "{{DATE}}"
 tags: ["photo"]
 draft: true
 slug: "{{SLUG}}"
+mainImage: ""
 ---
-import PixelDivider from '../../../../assets/pixel-heart-header.gif'
+import { assets } from "../../../../global-components/Assets"
 import '../../../../global-components/ImagePosts.css'
-import Kashiwagi from '../../../content/art/'
 
-export const mainImage = Kashiwagi;
+<img src={frontmatter.mainImage} className="main-image" loading="lazy"/>
 
-<img src={mainImage} className="main-image" loading="lazy"/>
-
-<img src={PixelDivider} className="header-img" loading="lazy"/>
+<img src={assets.divider} className="header-img" loading="lazy"/>

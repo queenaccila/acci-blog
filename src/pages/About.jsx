@@ -1,5 +1,5 @@
-import PixelHeader from "../assets/pixel-heart-header.gif"
 import Dropdown from "../global-components/DropdownText"
+import { assets } from "../global-components/Assets";
 import './About.css'
 
 function About() {
@@ -13,8 +13,9 @@ function About() {
     <>
       <div className="title-div">
         <h1>About My Blog</h1>
+        <img src={assets.aboutMe} className="about-me-image" />
         <div className="section">
-          <img src={PixelHeader} className="header-img" loading="lazy"/>
+          <img src={assets.divider} className="header-img" loading="lazy"/>
 
           <h2>About Me</h2>
           <p>
@@ -25,7 +26,7 @@ function About() {
             I started drawing when I was in high school, and slowly started to learn 3D modeling later during my time at university.
           </p>
 
-          <img src={PixelHeader} className="header-img" loading="lazy"/>
+          <img src={assets.divider} className="header-img" loading="lazy"/>
 
           <h2>Making this website</h2>
           <p>
@@ -51,7 +52,7 @@ function About() {
             It's a way for me to take better control of my creative journey, give my ideas a permanent home, and to remind myself that progress is just as valuable as the final product.
           </p>
 
-          <img src={PixelHeader} className="header-img" loading="lazy"/>
+          <img src={assets.divider} className="header-img" loading="lazy"/>
 
           <h2>My background and interests</h2>
           <p>
@@ -70,7 +71,7 @@ function About() {
             More recently, I’ve been diving back into web development, which lets me experiment with projects that are not just functional, but also playful and visually appealing.
             I especially love making “cutesy tech,” where design and aesthetics play just as big a role as code.
           </p>
-          <img src={PixelHeader} className="header-img" loading="lazy"/>
+          <img src={assets.divider} className="header-img" loading="lazy"/>
 
           <h2>Tools I use</h2>
 
@@ -80,7 +81,7 @@ function About() {
           <h3>Game Development</h3>
           <p>Unity, GDevelop, Godot, Unreal 5</p>
 
-          <img src={PixelHeader} className="header-img" loading="lazy"/>
+          <img src={assets.divider} className="header-img" loading="lazy"/>
 
           <h2>FAQs About This Website</h2>
           <Dropdown faqs={DropdownText}/>

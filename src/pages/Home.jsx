@@ -2,7 +2,7 @@ import acciLogo from '../assets/acci-logo.png'
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { posts, getTopRecentPosts } from '../content/PostIndex';
-import PixelDivider from '../assets/pixel-heart-header.gif'
+import { assets } from '../global-components/Assets';
 import './Home.css'
 
 function Home() {
@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <div className='main-div'>
-      <img src={acciLogo} className="acci-logo" loading="lazy" />
+      <img src={assets.logo} className="acci-logo" loading="lazy" />
       <h1 className="title-style">Acci's Blog</h1>
       <div className="description">
         <h3 className="description-header">She/Her ✦ 23 ✦ Sep 29th ✦ PST</h3>
@@ -35,7 +35,7 @@ function Home() {
         </p>
       </div>
 
-      <img src={PixelDivider} className='header-img' />
+      <img src={assets.divider} className='header-img' />
 
       {/* Recent Posts Section */}
       <div className="recent-posts">
@@ -58,7 +58,7 @@ function Home() {
         <h3><Link to="/posts" className='recent-posts-link'>All posts</Link></h3>
       </div>
 
-      <img src={PixelDivider} className='header-img' />
+      <img src={assets.divider} className='header-img' />
 
       {/* Recent Art & Photos Section */}
       <div className='recent-images'>
@@ -80,7 +80,7 @@ function Home() {
         <h3><Link to="/art" className='recent-posts-link'>All art + photos</Link></h3>
       </div>
 
-      <img src={PixelDivider} className='header-img' />
+      <img src={assets.divider} className='header-img' />
 
       {/* Recent Videos */}
       <div className='recent-videos'>

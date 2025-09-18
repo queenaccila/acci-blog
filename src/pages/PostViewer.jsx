@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { posts } from "../content/PostIndex";
 import { useNavigate } from 'react-router-dom';
+import { assets } from "../global-components/Assets";
 import CommentSystem from '../global-components/comment-system/CommentSystem'
 import './PostViewer.css'
 
@@ -16,7 +17,11 @@ function PostViewer() {
 
     if (!post) {
         return (
-            <h2>Post not found</h2>
+            <div>
+                <h1>Post not found</h1>
+                <img src={assets.error} className="error-image" />
+                <p>Sorry about that! The page might've been removed or mislinked.</p>
+            </div>
         );
     }
 

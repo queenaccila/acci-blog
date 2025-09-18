@@ -2,10 +2,15 @@
     text-align: left;
     margin-top: 10rem;
     margin-bottom: 10rem;
+    white-space: normal;
 }
 
 .title-div h3 {
     text-align: left;
+}
+
+.title-div p {
+    text-wrap-mode: wrap;
 }
 
 .section {
@@ -13,7 +18,6 @@
 }
 
 .header-img {
-    display: block;
     margin: 1rem auto;
     height: auto;
     max-width: 100%;
@@ -26,4 +30,14 @@
 .icon-list li {
     display: inline-block;
     margin-right: 1rem;
+}
+
+.about-me-image {
+    width: 30rem;
+}
+
+@media (max-width: 768px) {
+    .header-img {
+        width: 25rem;
+    }
 }

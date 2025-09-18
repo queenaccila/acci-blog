@@ -3,8 +3,18 @@
     padding-top: 10rem;
 }
 
+.error-image {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+}
+
 @media (max-width: 768px) {
     .post-page {
         padding-top: 5rem;
+    }
+
+    .error-image {
+        width: 20rem;
     }
 }

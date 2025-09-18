@@ -1,4 +1,5 @@
 import { FilloutStandardEmbed } from "@fillout/react";
+import { assets } from "../global-components/Assets";
 import './Inbox.css'
 
 function Inbox() {
@@ -6,6 +7,7 @@ function Inbox() {
   return (
     <div className="form-div">
         <h1>Inbox</h1>
+        <img src={assets.inbox} className="inbox-image" />
         <h2>Submission Rules</h2>
         <p>Any submission content won't be considered if it contains any of these:</p>
         <ul className="rules-list">

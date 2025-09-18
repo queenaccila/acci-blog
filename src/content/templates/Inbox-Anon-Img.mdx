@@ -5,13 +5,12 @@ tags: ["inbox"]
 draft: true
 slug: "{{SLUG}}"
 ---
-import PixelDivider from '../../../../assets/pixel-heart-header.gif'
+import { assets } from "../../../../global-components/Assets"
 import InboxSubmission from '../../../../global-components/InboxSubmission'
-import SubmissionImg from '../../../art/MinaChibis.png'
 
 <InboxSubmission
     text=""
-    submissionImg={SubmissionImg}
+    submissionImg={assets.image}
 />
 
-<img src={PixelDivider} className="header-img" loading="lazy"/>
+<img src={assets.divider} className="header-img" loading="lazy"/>

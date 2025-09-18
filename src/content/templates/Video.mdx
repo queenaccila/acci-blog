@@ -6,7 +6,7 @@ draft: true
 slug: "{{SLUG}}"
 videoType: horizontal
 ---
-import PixelDivider from '../../../../assets/pixel-heart-header.gif'
+import { assets } from "../../../../global-components/Assets"
 import '../../../../pages/Videos.css'
 export const videoUrl = ""
 
@@ -17,4 +17,4 @@ export const videoUrl = ""
 >
 </iframe>
 
-<img src={PixelDivider} className="header-img" loading="lazy"/>
+<img src={assets.divider} className="header-img" loading="lazy"/>

@@ -1,7 +1,6 @@
 // InboxSubmissionBubble.jsx
 import { Link } from "react-router-dom";
-import { BsPersonFill } from "react-icons/bs";
-import TumblrIcon from "../assets/tumblr-icon.png"
+import { formIcons } from "./Assets";
 import './InboxSubmission.css';
 
 function InboxSubmission({
@@ -12,7 +11,7 @@ function InboxSubmission({
     userIcon
 }) {
     const isNotAnon = !!username && !!userUrl && !!userIcon;
-    const defaultIcon = TumblrIcon; // replace with your default
+    const defaultIcon = formIcons.anon; // replace with your default
 
     return (
         <div>
