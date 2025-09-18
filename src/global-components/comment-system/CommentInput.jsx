@@ -125,6 +125,17 @@ function CommentInput({ currentPostSlug, onNewComment }) {
                 </div>
             )}
 
+            <details>
+                <summary>Basic Rules</summary>
+                <ul>
+                    <li>Be respectful</li>
+                    <li>Stay on topic and relevant to the discussion</li>
+                    <li>No spam or advertising</li>
+                    <li>Keep it safe for work (no explicit content)</li>
+                </ul>
+                If something anything needs to be reported, please contact my email: <a href="mailto:official@accila.com">official@accila.com</a>
+            </details>
+
             {/* Comment Input Form */}
             <form onSubmit={handleSubmit} className="comment-form">
                 <textarea

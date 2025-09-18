@@ -5,7 +5,7 @@ export const posts = Object.entries(
   component: mod.default,
   frontmatter: mod.frontmatter,
   source: path,
-  mainImage: mod.mainImage || null,
+  mainImage: mod.frontmatter?.mainImage || null,
   videoUrl: mod.videoUrl || null
 }));
 

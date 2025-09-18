@@ -2,13 +2,9 @@ import PixelHeader from "../assets/pixel-heart-header.gif"
 import Dropdown from "../global-components/DropdownText"
 import './About.css'
 
-import { IconContext } from "react-icons";
-import { FaReact } from "react-icons/fa";
-import { SiHugo } from "react-icons/si";
-
 function About() {
   const DropdownText = [
-    { question: "What did you use to make this blog?", answer: "I used React as my main web framework (same framework the Facebook devs use), and use Vite as my main tool to build and run React. To deploy the website I use Cloudflare's services, and I've bought the domain from Cloudflare as well. In terms of posting videos on here, I use Bunny Stream to store and show my videos to avoid ads and have more control over them. I might also embed videos from my Newgrounds account." },
+    { question: "What did you use to make this blog?", answer: "I used React as my main web framework, and use Vite as my main tool to build and run React. To deploy the website I use Cloudflare's services, and I've bought the domain from Cloudflare as well. In terms of posting videos on here, I use Bunny Stream to store and show my videos to avoid ads and have more control over them. I might also embed videos from my Newgrounds account." },
     { question: "What if I want to ask you something?", answer: <>Use this link to <a href="/inbox">my inbox</a> to ask me anything!</> },
     { question: "I want to comment on your post, but I don't have GitHub or Discord. Are there other ways to make a comment?", answer: <>Right now I am using social sites that have native account authentication with Supabase. I'm working on adding more integrations so it's more accessible for people to comment, but feel free to still send something to <a href="/inbox">my inbox</a>!</> }
   ];
@@ -78,13 +74,11 @@ function About() {
 
           <h2>Tools I use</h2>
 
-          <IconContext.Provider value={{ size: "3rem" }}>
           <h3>Web Development</h3>
-            <ul className="icon-list">
-              <li><FaReact /></li>
-              <li><SiHugo /></li>
-            </ul>
-          </IconContext.Provider>
+          <p>React, Hugo, JavaScript</p>
+
+          <h3>Game Development</h3>
+          <p>Unity, GDevelop, Godot, Unreal 5</p>
 
           <img src={PixelHeader} className="header-img" loading="lazy"/>
 

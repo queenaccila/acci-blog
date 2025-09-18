@@ -44,6 +44,8 @@ function PostViewer() {
             {/* Render the actual MDX content */}
             <PostComponent className="post-content"/>
 
+            <hr/>
+
             {/* Comment system */}
             <CommentSystem postSlug={slug}/>
         </div>

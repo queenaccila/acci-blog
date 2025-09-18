@@ -70,7 +70,7 @@ function ArtGallery() {
                         >
                         <div className="gallery-card">
                             <img
-                                src={post.mainImage}
+                                src={post.frontmatter.mainImage}
                                 alt={post.frontmatter.title}
                                 className="gallery-img"
                             />
