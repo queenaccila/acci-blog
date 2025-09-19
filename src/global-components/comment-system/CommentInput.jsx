@@ -133,7 +133,7 @@ function CommentInput({ currentPostSlug, onNewComment }) {
                     <li>No spam or advertising</li>
                     <li>Keep it safe for work (no explicit content)</li>
                 </ul>
-                If something anything needs to be reported, please contact my email: <a href="mailto:official@accila.com">official@accila.com</a>
+                If something anything needs to be reported or fixed, please contact my email: <a href="mailto:official@accila.com">official@accila.com</a>
             </details>
 
             {/* Comment Input Form */}

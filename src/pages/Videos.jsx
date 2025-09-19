@@ -28,6 +28,7 @@ function Videos() {
                             src={post.videoUrl}
                             title={post.frontmatter.title}
                             className={`video-iframe-${post.frontmatter.videoType}`}
+                            allowFullScreen="true"
                         />
                     </Link>
                 </div>
