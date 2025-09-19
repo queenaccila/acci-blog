@@ -1,11 +1,13 @@
 import './SingleComment.css';
 import { supabase } from './SignInFunctions';
-import AnonPic from '../../assets/tumblr-icon.png';
+import { formIcons } from '../Assets';
 import { useState, useEffect } from "react";
 
 function SingleComment({ commentId, userId, username, profilePic, content, createdAt, refreshComments }) {
     const [currentUser, setCurrentUser] = useState(null);
-    const avatarSrc = profilePic && profilePic.trim() !== '' ? profilePic : AnonPic;
+    const anonPic = formIcons.anon;
+
+    const avatarSrc = profilePic && profilePic.trim() !== '' ? profilePic : anonPic;
 
     // Fetch the currently signed-in user
     useEffect(() => {

@@ -6,7 +6,7 @@ draft: false
 slug: "kashiwagi-scrapbook-page"
 videoType: vertical
 ---
-import pixelDivider from '../../../../assets/pixel-heart-header.gif'
+import { assets } from "../../../../global-components/Assets"
 import '../../../../pages/Videos.css'
 
 import { Link } from "react-router-dom"
@@ -22,7 +22,7 @@ export const videoUrl = "https://iframe.mediadelivery.net/embed/495453/e2118e9a-
 
 <u>**Music used:**</u> [Sideways Samba](https://audionautix.com/free-music/jazz) by Jason Shaw
 
-<img src={pixelDivider} className="header-img"/>
+<img src={assets.divider} className="header-img" loading="lazy"/>
 
 ## Making a scrapbook page
 
@@ -32,4 +32,4 @@ Part of my journal I also treat it like a scrapbook, and make fun decorative pag
 I might make another post in the future about my new journal, as I've been trying some new things and love it so far!
 I also made this to start off my video gallery, which can be viewed <Link to="/videos">here</Link>.
 
-<img src={pixelDivider} className="header-img"/>
+<img src={assets.divider} className="header-img" loading="lazy"/>

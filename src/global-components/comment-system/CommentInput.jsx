@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import AnonFile from "../../assets/tumblr-icon.png";
+import { formIcons } from '../Assets';
 import "./CommentInput.css";
 
 import { supabase, signInWithProvider, signOut, getUser } from "./SignInFunctions";
@@ -11,6 +11,8 @@ function CommentInput({ currentPostSlug, onNewComment }) {
     const [showSignInPopup, setShowSignInPopup] = useState(false);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+
+    const anonPic = formIcons.anon;
 
     // fetch user session
     useEffect(() => {
@@ -108,7 +110,7 @@ function CommentInput({ currentPostSlug, onNewComment }) {
                 <div className="user-container">
                     <div className="user-info">
                         <img
-                            src={user.user_metadata?.avatar_url || AnonFile}
+                            src={user.user_metadata?.avatar_url || anonPic}
                             alt="User avatar"
                             className="user-icon"
                         />

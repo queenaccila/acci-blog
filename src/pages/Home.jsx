@@ -1,4 +1,3 @@
-import acciLogo from '../assets/acci-logo.png'
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { posts, getTopRecentPosts } from '../content/PostIndex';
