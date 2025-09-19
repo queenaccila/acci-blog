@@ -5,6 +5,10 @@
     white-space: normal;
 }
 
+.title-div h1 {
+    text-align: center;
+}
+
 .title-div h3 {
     text-align: left;
 }
@@ -18,9 +22,10 @@
 }
 
 .header-img {
+    display: block;
     margin: 1rem auto;
-    height: auto;
     max-width: 100%;
+    width: 30rem;
 }
 
 .icon-list {
@@ -34,10 +39,26 @@
 
 .about-me-image {
     width: 30rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-padding {
+    padding-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
+    .title-div h1 {
+        text-align: left;
+    }
+
+    .about-me-image {
+        width: 23rem;
+    }
+
     .header-img {
         width: 25rem;
+        margin: 0rem;
     }
 }
