@@ -1,5 +1,7 @@
 .post-div {
     align-items: start;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .post-list {

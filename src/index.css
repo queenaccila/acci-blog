@@ -58,11 +58,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  display: block; /* Reset flex to default */
 }
+
 
 h1 {
   font-size: 3.2em;

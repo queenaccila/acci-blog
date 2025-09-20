@@ -1,8 +1,13 @@
 .main-div {
-  margin-top: 12rem;
+  padding-top: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center; /* center content horizontally */
+  justify-items: center;
+}
+
+* {
+  border: 1px solid red;
 }
 
 .acci-logo {
@@ -40,11 +45,13 @@
 .recent-images,
 .recent-videos {
   width: 100%;
-  margin: 0 auto;
+  max-width: 100%;       /* prevent overflow */
   text-align: left;
+  padding: 0rem;       /* optional: keep spacing from viewport edges */
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+
 
 .recent-posts h2,
 .recent-images h2 {
@@ -89,18 +96,16 @@
 /* Grid for images */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1rem;
-}
-
-.gallery-card {
-  overflow: hidden;
-  border-radius: 1rem;
-  transition: transform 0.3s ease;
+  width: 100%;
+  padding: 0rem; /* keeps images from touching screen edges */
+  box-sizing: border-box;
 }
 
 .gallery-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
@@ -119,8 +124,8 @@
   border-radius: 15px;
 
   display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center;     /* Vertical center */
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -162,8 +167,9 @@
 /* mobile styling */
 @media (max-width: 768px) {
   .main-div {
-    margin-top: 6rem;
-    padding: 0 1rem;
+    padding-top: 6rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .acci-logo {
@@ -172,11 +178,6 @@
 
   .title-style {
     font-size: 2rem;
-  }
-
-  .description {
-    padding: 0 1rem 2rem 1rem;
-    text-align: center;
   }
 
   .description-header {
@@ -189,11 +190,6 @@
     margin-top: 1rem;
   }
 
-  /* Make the gallery items smaller for small screens */
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-
   .single-link {
     flex-direction: column;
     align-items: flex-start;
@@ -203,6 +199,10 @@
     margin-bottom: 0.5rem;
     margin-left: 1rem;
     text-align: center;
+  }
+
+  .gallery-grid {
+    gap: 0.5rem;
   }
 
   .post-link {

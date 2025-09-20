@@ -10,18 +10,15 @@ function Home() {
 
   // Filter posts based on the art or photo tag
   const displayedPosts = posts
-    .filter(
-      post =>
-        (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
-        post.mainImage
-    .slice(0, 3)
-  );
+    .filter(post =>
+      (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
+      post.mainImage
+    )
+    .slice(0, 3);
 
   const videoPosts = posts
-    .filter(
-      post => post.frontmatter?.tags?.includes('video') && post.videoUrl
-    .slice(0, 2)
-  );
+    .filter(post => post.frontmatter?.tags?.includes('video') && post.videoUrl)
+    .slice(0, 2);
 
   return (
     <div className='main-div'>
@@ -86,19 +83,19 @@ function Home() {
         <h2>Recent Videos</h2>
         <div className='video-list'>
           {videoPosts.map(post => (
-                <div key={post.frontmatter.slug} className='video-card'>
-                    <Link to={`/posts/${post.frontmatter.slug}`}>
-                        <h3>{post.frontmatter.title}</h3>
-                        <div className="video-post">
-                            <iframe
-                                src={post.videoUrl}
-                                title={post.frontmatter.title}
-                                allowFullScreen="true"
-                                className={`video-iframe-${post.frontmatter.videoType}`}
-                            />
-                        </div>
-                    </Link>
+            <div key={post.frontmatter.slug} className='video-card'>
+              <Link to={`/posts/${post.frontmatter.slug}`}>
+                <h3>{post.frontmatter.title}</h3>
+                <div className="video-post">
+                  <iframe
+                      src={post.videoUrl}
+                      title={post.frontmatter.title}
+                      allowFullScreen="true"
+                      className={`video-iframe-${post.frontmatter.videoType}`}
+                  />
                 </div>
+              </Link>
+            </div>
             ))}
         </div>
         <h3><Link to="/videos">All videos</Link></h3>

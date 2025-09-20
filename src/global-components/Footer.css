@@ -47,6 +47,8 @@
         margin-top: 5rem;
         margin-left: 0rem;
         text-wrap-mode: nowrap;
+        gap: 1rem;
+        padding-right: 2rem;
     }
 
     .copyright-text {
