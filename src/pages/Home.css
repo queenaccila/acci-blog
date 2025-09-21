@@ -6,10 +6,6 @@
   justify-items: center;
 }
 
-* {
-  border: 1px solid red;
-}
-
 .acci-logo {
   width: 15rem;
   max-width: 80%;
@@ -94,9 +90,9 @@
 }
 
 /* Grid for images */
-.gallery-grid {
+.gallery-grid-test {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   gap: 1rem;
   width: 100%;
   padding: 0rem; /* keeps images from touching screen edges */
@@ -201,7 +197,8 @@
     text-align: center;
   }
 
-  .gallery-grid {
+  .gallery-grid-test {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 0.5rem;
   }
 

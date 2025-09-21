@@ -30,7 +30,7 @@ function Tags() {
     const currentPagePosts = pages[page - 1] || [];
     
     return (
-        <div>
+        <div className='tags-div'>
             <h1>Post Tags</h1>
 
             {/* tag list */}

@@ -2,7 +2,9 @@
 .gallery-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
 }
 
 /* Tab buttons */
@@ -27,6 +29,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1rem;
+  width: 100%;
+  padding: 0rem; /* keeps images from touching screen edges */
+  box-sizing: border-box;
 }
 
 /* Individual gallery item / card */
@@ -48,4 +53,14 @@
   text-align: center;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .gallery-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
 }

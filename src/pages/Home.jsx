@@ -59,7 +59,7 @@ function Home() {
       {/* Recent Art & Photos Section */}
       <div className='recent-images'>
         <h2>Recent Art & Photos</h2>
-        <div className="gallery-grid">
+        <div className="gallery-grid-test">
           {displayedPosts.map(post => (
             <Link key={post.frontmatter.slug} to={`/posts/${post.frontmatter.slug}`}>
               <motion.div whileHover={{ scale: 1.1 }}>
