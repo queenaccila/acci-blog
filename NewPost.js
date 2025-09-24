@@ -29,7 +29,7 @@ async function main() {
             type: "list",
             name: "type",
             message: "Select the post type:",
-            choices: ["general", "art", "video", "inboxAnon", "inboxUser", "inboxAnonImg", "inboxUserImg"],
+            choices: ["general", "art", "photo", "video", "inboxAnon", "inboxUser", "inboxAnonImg", "inboxUserImg"],
         },
         {
             type: "input",
