@@ -8,13 +8,18 @@ function ArtGallery() {
     const [selectedTab, setSelectedTab] = useState("art");
 
     // filter posts based on the art or photo tag
-    const artPosts = posts.filter(
+    const artPosts = posts
+    .filter(
         post => post.frontmatter?.tags?.includes('art') && post.mainImage
-    );
+    )
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
-    const photoPosts = posts.filter(
+    const photoPosts = posts
+    .filter(
         post => post.frontmatter?.tags?.includes('photos') && post.mainImage
-    );
+    )
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+
 
     const displayedPosts = selectedTab === "art" ? artPosts : photoPosts;
 
