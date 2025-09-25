@@ -14,10 +14,12 @@ function Home() {
       (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
       post.mainImage
     )
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
     .slice(0, 3);
 
   const videoPosts = posts
     .filter(post => post.frontmatter?.tags?.includes('video') && post.videoUrl)
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
     .slice(0, 2);
 
   return (
