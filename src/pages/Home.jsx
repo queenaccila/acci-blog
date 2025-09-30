@@ -27,7 +27,7 @@ function Home() {
       <img src={assets.logo} className="acci-logo" loading="lazy" />
       <h1 className="title-style">Acci's Blog</h1>
       <div className="description">
-        <h3 className="description-header">She/Her ✦ 23 ✦ Sep 29th ✦ PST</h3>
+        <h3 className="description-header">She/Her ✦ 24 ✦ Sep 29th ✦ PST</h3>
         <p className="description-text">
           My cozy corner of the internet where I share my projects, art, and general thoughts on things I like.
         </p>
