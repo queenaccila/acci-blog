@@ -8,9 +8,11 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
 
 function Videos() {
-    const videoPosts = posts.filter(
+    const videoPosts = posts
+    .filter(
         post => post.frontmatter?.tags?.includes('video') && post.videoUrl
-    );
+    )
+    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
     const [page, setPage] = useState(1);
     const pages = paginatePosts(videoPosts, 3); // 3 videos per page

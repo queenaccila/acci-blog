@@ -19,7 +19,11 @@ function Inbox() {
         </ul>
         </details>
         <img src={assets.divider} className="divider" />
-        <FilloutStandardEmbed filloutId="qophmY7MXCus" className="form-inbox" />
+        <div
+          className="form-container"
+        >
+          <FilloutStandardEmbed filloutId="qophmY7MXCus" className="form-inbox" />
+        </div>
         <img src={assets.divider} className="divider" />
     </div>
   );
