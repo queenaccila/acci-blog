@@ -9,6 +9,10 @@
     width: 30rem;
 }
 
+.error-div {
+    margin-top: 10rem;
+}
+
 @media (max-width: 768px) {
     .post-page {
         padding-top: 5rem;

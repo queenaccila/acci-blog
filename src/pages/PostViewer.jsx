@@ -17,7 +17,7 @@ function PostViewer() {
 
     if (!post) {
         return (
-            <div>
+            <div className="error-div">
                 <h1>Post not found</h1>
                 <img src={assets.error} className="error-image" />
                 <p>Sorry about that! The page might've been removed or mislinked.</p>
