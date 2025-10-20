@@ -11,7 +11,7 @@ function Home() {
   // Filter posts based on the art or photo tag
   const displayedPosts = posts
     .filter(post =>
-      (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photo')) &&
+      (post.frontmatter?.tags?.includes('art') || post.frontmatter?.tags?.includes('photos')) &&
       post.mainImage
     )
     .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
