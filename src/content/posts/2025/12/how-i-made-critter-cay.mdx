@@ -1,0 +1,118 @@
+---
+title: "How I made Critter Cay"
+date: "2025-12-28T07:06:21.598Z"
+tags: ["video", "photos", "devlog", "game dev"]
+draft: false
+slug: "how-i-made-critter-cay"
+videoType: horizontal
+mainImage: "https://acci-blog.b-cdn.net/dec-2025/critter-doodles.jpg"
+---
+import { assets } from "../../../../global-components/Assets"
+import '../../../../pages/Videos.css'
+export const videoUrl = "https://iframe.mediadelivery.net/embed/495453/520f2c5b-8222-4fcb-9a56-646d2b30ed82?autoplay=true&loop=false&muted=false&preload=true&responsive=true"
+
+## Outline
+- Context of before making the game
+- Brainstorming
+- Pocket God
+- Creating the critters
+- Making the game
+- UTAU for voice SFX
+- Finishing everything
+- Conclusion
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Context before making the game
+- So I am a huge fan of the GDevelop engine, as it's a no-code game engine that's also free + open-source! Although I'm coming from a computer science and programming background, I sometimes have simple game ideas, only for it to not work out or it's completely out of my scope after putting tons of hours into it. GDevelop helps me quickly prototype ideas fairly quickly, and it has a lot of room for potential (especially with their 3D editor getting officially released a few weeks ago)
+- Most of my previous game development experience has been in Godot and Unity. I also used to be a camp counselor for a game development camp, where Construct 3 was used to teach kids how to make their own games. I really liked Construct 3 and how they make things easy to set games up, but I couldn't justify the price for myself since it's a freemium game engine. After I found out GDevelop had a similar workflow to Construct 3 (and that it's FOSS), I wanted to give it a chance.
+- Putting my game experience aside, I saw that GDevelop was hosting another game jam earlier this year, and I wanted to give it another shot. I've tried participating a couple times in the past, and I couldn't get myself to finish my work back then.
+- I've had a pattern in the past of me starting game jam entries, and never finishing them. Once in a while, I would have a game jam where I manage to push through and finish, but I've tried figuring out for the longest time why my game jam projects never are in a state that I can submit them. Making this project from start to finish with a closer eye on what was working for me helped me figure out what was holding me back, which I will go over at the end of this post!
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Brainstorming
+- The theme of the game jam was **Take Control**, and I had some ideas that first came to mind:
+- My mind started to think of simulation games like the Sims, where you can literally take control of your characters to initiate or develop relationships with other sims, as well as 
+- Wandering from the Sims, I went down the route of cozy games like Animal Crossing or Stardew Valley, where you can determine what you want to do for the day, whether it's farming, fishing, talking to NPCs, etc.
+
+<img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Animal_Crossing_New_Leaf_Mayor.jpg?20130520034537" className="header-img" loading="lazy"/>
+[Image source from Animal Crossing: New Leaf Wiki](https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf)
+
+- I obviously couldn't make an entire farming or relationship building game with the amount of time I had, and I wanted to make something simple so it wasn't out of my scope.
+- When I was still thinking of refining my potential idea, I was considering other types of games that fit the game jam theme, and sandbox type of games was another genre I've considered. Game platforms like Roblox and Garry's Mod quite literally make you take control of making entire games.
+- And this was how I remembered an old game that I played a very long time ago...
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Pocket God
+- Way back when the iPhone was still new, my family bought one at the time. We all were really curious about what you could do with this kind of device, and I remembered we downloaded a bunch of small games and gimmick apps that we found fun (games like Fruit Ninja, Angry Birds, basically very old 2010 mobile games).
+- There was an old mobile game I used to play all the time called **Pocket God**. It was a game where you literally played as a god and messed around with a bunch of cavemen called Pygmies on a small island.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrvPKVAfzTtSk0wRSTmUQ9hGr97aURpczDgDvT0DrwoaRk267xXkDs90yaOPrjw0a1YRAK6lZCZD2WWETRY0AFExJbvoMuWwsKF6bokxZcN6ycp-10sYtDT1QBcH4jvDlbJak-pH_sLLKG/s1600/PocketgodLARGEscreen3nophone.png" className="header-img" loading="lazy"/>
+[Image source from Pocket God Blog](https://pocketgod.blogspot.com/2010/09/pygmies-land-on-verizon.html)
+
+- I'm not sure how to describe it, but there was this fun appeal of trying to discover new things of what you could do with the Pygmies. You could range from being a complete chaotic menace and destroy all of them, or you could be nice and give them food. If you triggered the right events, you could start mini games like a doodle jump clone or a boss fight with a T-Rex.
+- **Note:** I don't think this game is available anymore on Android, as I couldn't find the game on Google Play. But there seems to be one still on the [iOS App Store](https://apps.apple.com/us/app/pocket-god/id301387274)
+- This got me settled with making a Pocket God type of game, but making different types of characters and more "cozy-like" mechanics like fishing and farming like from Animal Crossing. I also wanted a small hint of chaos in it so it wasn't a completely passive game, as I found the chaotic bits of it fun when mixed with the more comforting aspects of the original Pocket God game.
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Creating the critters
+- I managed to figured out the game title first before I managed to flesh out any of the gameplay content. I still wanted to keep the island setting so I could use more environmental things more easily (like fishing) with the setting making somewhat logical sense of why the critters (the creatures you control) are confined within a small space.
+- I wanted to call them "critters" since I found the name itself sounded really cute. Since the game was also on an island, I didn't want to just use the word "island" and be done with it. I tried looking up similar words to island, and the one that seemed to hit the most was "cay". Technically a cay is a type of sandy island that are formed near coral reefs, and I thought it would be fun to use an alliteration by calling it "Critter Cay".
+- My character design was inspired by the Tamagotchi designs. They are silly little guys who are also very simple but also distinctive to look at. Characters like Kuchipachi are probably some of my favorite designs from the series (although I would say Mimitchi is my more personal favorite).
+- Originally, I had some doodles of other critters that could be created based on certain types of events that get triggered. For example, if you feed a critter a lot of fruit, you would get a fruit-based critter. Or if you decide to put a critter over a fire and (hopefully accidentally) put it in flames, you get a fire-based critter. It would be similar to how Tamagotchis evolve based on how you well you've taken care of them *(ex: Kuchipatchi is a result of what happens when you don't feed or play with him enough in the child or toddler stages)*
+<img src={frontmatter.mainImage} className="header-img" loading="lazy"/>
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Making the game
+- Trying to make this game was not difficult in terms of the different mechanics themselves. But what ate up most of my time was just trying to make sure each of the different features you can do with the critters didn't bug out when overlapped.
+- Every feature to interact with the critters and the cay itself can be toggled on or off, so the players can mess around and figure out what they can do on the cay. I wanted to include features that could be either cozy or chaotic. Like getting a critter to farm fruit or fish for food, but also can set them on fire or strike them with lightning if you summon a storm.
+- I wanted to make it chance-based when triggering certain events with critters. They would all start with the default look (which is the look of the critters in the actual game), but there's a chance you can change the critter's appearance to evolve into something else. I didn't have enough time to get the evolutions in, mainly due to time constraints since animating the main critter took more time than expected.
+- I made animations for the main critter in Moho Pro, and I really like using as one of my main animation programs! Doing puppet-based animations combined with the vector drawing tools make it very seamless for me to create character animations a lot more quickly. Given that I made probably way more animations than needed, I took way more time than I needed to since I didn't have enough time to implement everything.
+- As for the visual designs for the critters, I made one critter to use and took advantage of GDevelop's object effect that can change colors. After color picking the main body color, I randomized it to a total of 3 colors that can be randomly picked when they spawn in. It was a small thing I added, but I felt this could at least given more visual variety since I couldn't put another character design in the game.
+
+<iframe
+    src="https://iframe.mediadelivery.net/embed/495453/c69d585c-1050-4bff-91a1-b759b40ff25e"
+    className="video-iframe-horizontal"
+    allowFullScreen="true"
+>
+</iframe>
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## UTAU for voice SFX
+- A small part of this project I wanted to test a potential idea. I had this idea of using UTAU (or basically any similar vocal bank synthesizers) for voice acting. Although when I say "voice acting", I really just mean using basic syllables of a voice sample and making that as SFX for voices.
+- It's like how NPCs talk in Animal Crossing, or how characters talk in Okami. They don't really speak actual words in their dialogue, but you hear syllables of words in different tones and pitches to get an idea of how someone may talk. I notice a lot of small indie horror games have been doing this as well, as it's a way to make dialogue SFX without actually including dialogue.
+- UTAUs are basically a voice bank that have samples of syllables, and with this in mind, I wonder how it would sound if I were to use it in a game like this. The game itself doesn't have any dialogue, but I wanted to at least make dedicated voice clips of the critters so they sounded unique.
+- Another example of UTAU used for voice dialogue is when in Bee and Puppycat, where Puppycat is voiced by the vocaloid, Oliver. Vocaloids are commercial UTAUs that have more polish to them, but I didn't really need something like that. UTAUs are community-based, and you can even create your own with a following character with them.
+- I used an UTAU named [Kumi Hitsune](https://cubialpha.wixsite.com/kumivoice), who is supposed to be a parody of Hatsune Miku. She has a Japanese voicebank variation called "Pigment", which is mainly for power vocals. I used mostly her lower range of vocals to make the sound of the critters not be obnoxiously high.
+- Using OpenUTAU, I was able to quick put together some sounds for the critters, even if it was only two of them. I really liked how easy it was to use and install once I got the voices working.
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Finishing everything
+- Once everything was put together for the most part, it was pretty easy to export to a web build. Since I already had knowledge over exporting and formatting for games, this part was pretty easy for the most part.
+- Something I really liked about GDevelop is the gd.games website. I feel like GDevelop is trying to make something similar to Poki Games or Crazy Games, but it seems pretty niche and small in comparison. Even if it's not as big compared to similar websites, I mainly like how easy it is to export games to this website and receive feedback. This is something I would frankly say a lot of other game engines do not have, which makes me more compelled to use GDevelop over other engines.
+- I really like when game jams include a voting and feedback session after the deadline, as I loved getting all the feedback and comments on my game! It felt really encouraging to see people take their time to provide feedback. I also provided comments for other game jam entries, and it was all around a pretty fun time!
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
+
+## Conclusion
+- I realized when I was making this game, I managed to finish my game a lot faster when I know realistically if I can finish within the time scope I was given. I also find that it's a lot easier to create and finish game ideas that are a "remixed" or "inspired" version of what I'm already familiar with helps me create ideas a lot faster.
+- Something that I noticed held me back in previous projects as a solo dev is I need to have dedicated times of focusing only on one area of game dev. I have the risk of stretching myself too thin if I try to make everything and doing constant context switching between art and programming.
+- I also realized a lot of making this game was possible due to me knowing more of the game engine's limits and potential with what it can do. I feel like a lot of my game jam projects get stopped midway in development is mainly me doing scope creep, and realizing the scope is out of either my own skills or how the game engine can create a specific type of mechanic.
+
+Now that I've gone through this kind of process, I'm hoping to apply what I learned to future game ideas, especially for my own personal game projects!
+
+<iframe
+    src={videoUrl}
+    className="video-iframe-horizontal"
+    allowFullScreen="true"
+>
+</iframe>
+## [Play the game here!](https://queenaccila.itch.io/critter-cay)
+
+<img src={assets.divider} className="header-img" loading="lazy"/>
