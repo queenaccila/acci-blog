@@ -10,7 +10,7 @@ import { IconContext } from "react-icons";
 function Footer() {
   return (
     <div className="entire-footer">
-        <p className="copyright-text">© 2025 - Accila</p>
+        <p className="copyright-text">© 2026 - Accila</p>
         <ul className="social-media">
             <IconContext.Provider value={{ size: "1.5rem" }}>
             <li className="social-media-link"><a href="https://github.com/queenaccila" target="_blank" rel="noopener noreferrer"><FaGithub /></a></li>
