@@ -1,9 +1,9 @@
 import './RecentPosts.css';
 import { posts, getRecentPosts } from '../content/PostIndex';
 
-console.log('All posts:', posts);  // <-- Check what your glob imported
+console.log('All posts:', posts);
 const recentPosts = getRecentPosts(posts, 5);
-console.log('Recent posts:', recentPosts); // <-- Check after filtering drafts
+console.log('Recent posts:', recentPosts);
 
 function RecentPosts({ limit = 5 }) {
   const recentPosts = getRecentPosts(posts, limit);
