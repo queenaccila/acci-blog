@@ -16,7 +16,6 @@ function Footer() {
             <li className="social-media-link"><a href="https://github.com/queenaccila" target="_blank" rel="noopener noreferrer"><FaGithub /></a></li>
             <li className="social-media-link"><a href="https://queenaccila.itch.io/" target="_blank" rel="noopener noreferrer"><FaItchIo /></a></li>
             <li className="newgrounds-logo"><a href="https://queenaccila.newgrounds.com/" target="_blank" rel="noopener noreferrer">NG</a></li>
-            <li className="social-media-link"><a href="https://www.pinterest.com/queenaccila/" target="_blank" rel="noopener noreferrer"><FaPinterest /></a></li>
             <li className="social-media-link"><a href="https://bsky.app/profile/queenaccila.bsky.social" target="_blank" rel="noopener noreferrer"><FaBluesky /></a></li>
             <li className="social-media-link"><a href="https://www.instagram.com/queenaccila/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a></li>
             </IconContext.Provider>
